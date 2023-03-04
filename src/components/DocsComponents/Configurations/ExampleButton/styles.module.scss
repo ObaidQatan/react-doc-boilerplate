@@ -1,0 +1,17 @@
+.example-btn {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--ifm-color-primary-dark);
+  }
+
+  &:active {
+    background-color: var(--ifm-color-primary-darker);
+  }
+}

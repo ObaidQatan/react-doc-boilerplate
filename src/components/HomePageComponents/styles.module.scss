@@ -1,0 +1,58 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+.banner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  width: min(calc(100% - 20px), 500px);
+  margin-inline: auto;
+  margin-block: 30px;
+  border-radius: 20px;
+  border: transparent 2px solid;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+
+  a {
+    font-weight: normal;
+    border: transparent 2px solid;
+    padding: 8px 32px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+  }
+
+  &-dark {
+    border: var(--ifm-color-primary-darker) 2px solid;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+
+    a {
+      background-color: var(--ifm-color-primary-darker);
+      border: var(--ifm-color-primary) 2px solid;
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 996px) {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body {
+}

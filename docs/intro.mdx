@@ -1,0 +1,25 @@
+---
+sidebar_position: 1
+---
+
+import IntroductionContent from "@site/src/components/DocsComponents/Introduction/IntroductionContent";
+
+# Introduction
+
+export const Introduction = ({ children }) => {
+  return (
+    <span
+      style={{
+        borderRadius: "2px",
+        padding: "0.2rem",
+      }}
+    >
+      {children}
+    </span>
+  );
+};
+
+<Introduction>
+  <h3>Quick Overview</h3>
+  <IntroductionContent />
+</Introduction>
