@@ -2,6 +2,12 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+@mixin important($css) {
+  @each $property, $value in $css {
+    #{$property}: $value !important;
+  }
+}
+
 .banner {
   padding: 4rem 0;
   text-align: center;
@@ -21,14 +27,20 @@
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 
   a {
-    font-weight: normal;
-    border: transparent 2px solid;
-    padding: 8px 32px;
-    border-radius: 10px;
-    font-size: 1.2rem;
     text-decoration: none;
+  }
+
+  button {
     background-color: white;
     color: black;
+    font-weight: bold;
+    padding: 8px 32px;
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: #dadada;
+      color: black;
+    }
   }
 
   &-dark {
@@ -36,10 +48,17 @@
     background-color: transparent;
     color: rgba(255, 255, 255, 0.8);
 
-    a {
-      background-color: var(--ifm-color-primary-darker);
-      border: var(--ifm-color-primary) 2px solid;
+    button {
+      background-color: var(--ifm-color-primary-dark);
       color: white;
+      font-weight: bold;
+      padding: 8px 32px;
+      font-size: 1.2rem;
+
+      &:hover {
+        background-color: var(--ifm-color-primary-darker);
+        color: white;
+      }
     }
   }
 

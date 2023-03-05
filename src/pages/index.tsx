@@ -1,21 +1,16 @@
 import React from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomePageBody from "../components/HomePageComponents/Body";
 import HomepageBanner from "../components/HomePageComponents/Banner";
-import "@site/src/css/common.scss";
+import { Page } from "../components/Page";
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <HomepageBanner />
-      <main>
+    <Page>
+      <Layout description="Description will go into a meta tag in <head />">
+        <HomepageBanner />
         <HomePageBody />
-      </main>
-    </Layout>
+      </Layout>
+    </Page>
   );
 }

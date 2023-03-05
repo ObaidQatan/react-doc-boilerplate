@@ -3,6 +3,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "../styles.module.scss";
 import useColorScheme from "../../../hooks/useColorScheme";
+import { Button } from "@mui/material";
 
 function HomepageBanner(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -17,7 +18,11 @@ function HomepageBanner(): JSX.Element {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link to="/docs/intro">Get Started</Link>
+          <Link to="/docs/intro">
+            <Button variant="contained" color="primary" className="button">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
