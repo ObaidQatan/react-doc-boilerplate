@@ -1,10 +1,67 @@
 {
-  "root": true,
-  "ignorePatterns": ["**/*"],
-  "overrides": [
-    {
-      "files": ["**/*.ts", "**/*.tsx"],
-      "rules": {}
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "import/extensions": [
+      "error",
+      {
+        "js": "off",
+        "jsx": "off",
+        "ts": "off",
+        "tsx": "off",
+        "scss": "off",
+        "sass": "off"
+      }
+    ],
+    "quotes": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "linebreak-style": "off",
+    "no-alert": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-console": "off",
+    "import/no-unresolved": "off",
+    "import/order": "warn",
+    "react/self-closing-comp": "warn",
+    "import/prefer-default-export": "off",
+    "react/function-component-definition": "off",
+    "consistent-return": "off",
+    "operator-linebreak": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "implicit-arrow-linebreak": "off",
+    "comma-dangle": "off"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/",
+    "build/",
+    ".docusaurus/",
+    "static/"
   ]
 }

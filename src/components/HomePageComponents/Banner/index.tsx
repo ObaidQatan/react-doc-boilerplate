@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { Button } from "@mui/material";
 import styles from "../styles.module.scss";
 import useColorScheme from "../../../hooks/useColorScheme";
-import { Button } from "@mui/material";
 
 function HomepageBanner(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();

@@ -1,7 +1,7 @@
 import React from "react";
 import "@site/src/css/common.scss";
-import useMUITheme from "../hooks/useMIUITheme";
 import { ThemeProvider } from "@mui/material/styles";
+import useMUITheme from "../hooks/useMIUITheme";
 import useColorScheme from "../hooks/useColorScheme";
 
 interface Props {
