@@ -1,6 +1,7 @@
 {
   "extends": [
     "airbnb",
+    "prettier",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
@@ -9,7 +10,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "extraFileExtensions": [".json"],
     "ecmaVersion": 2021,
     "sourceType": "module",
     "ecmaFeatures": {
@@ -55,7 +56,8 @@
     "operator-linebreak": "off",
     "@typescript-eslint/no-empty-function": "off",
     "implicit-arrow-linebreak": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "camelcase": "warn"
   },
   "ignorePatterns": [
     "node_modules/",

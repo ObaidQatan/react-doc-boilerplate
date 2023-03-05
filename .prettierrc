@@ -1,3 +1,12 @@
 {
-  "singleQuote": false
+  "overrides": [
+    {
+      "files": "*.{tsx,jsx,ts,js,md,mdx}",
+      "options": {
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": false
+      }
+    }
+  ]
 }
