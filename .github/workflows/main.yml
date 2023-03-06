@@ -29,14 +29,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-      # - name: Build and deploy preview
-      #   uses: JamesIves/github-pages-deploy-action@4.1.1
-      #   with:
-      #     branch: gh-pages
-      #     folder: build
-      #     clean: true
-      #     token: ${{ secrets.ACCESS_TOKEN }}
-
       - name: Build and Deploy Preview
         env:
           NODE_ENV: production
@@ -44,6 +36,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
+          token: ${{ secrets.ACCESS_TOKEN }}
           clean: true
           run: |
             yarn build
@@ -53,3 +46,11 @@ jobs:
             git add -f build/
             git commit -m "Deploy preview"
             git push -f origin gh-pages
+
+  # - name: Build and deploy preview
+  #   uses: JamesIves/github-pages-deploy-action@4.1.1
+  #   with:
+  #     branch: gh-pages
+  #     folder: build
+  #     clean: true
+  #     token: ${{ secrets.ACCESS_TOKEN }}
