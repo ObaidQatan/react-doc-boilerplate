@@ -46,6 +46,7 @@ jobs:
             git add -f build/
             git commit -m "Deploy preview"
             git push -f https://github.com/ObaidQatan/react-doc-boilerplate.git gh-pages
+          folder: build
 
   # - name: Build and deploy preview
   #   uses: JamesIves/github-pages-deploy-action@4.1.1
