@@ -1,4 +1,4 @@
-- branch: ["dev", "gh-pages"]
+- branches: ["dev", "gh-pages"]
   protection:
     required_status_checks:
       strict: true
