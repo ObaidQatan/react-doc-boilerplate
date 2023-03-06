@@ -24,27 +24,10 @@ jobs:
       - name: Lint
         run: yarn lint
 
-      - name: Protect dev branch
-        uses: peter-evans/protect-branch@v3.0.0
-        with:
-          github_token: ${{ secrets.TOKEN }}
-          branch: "dev"
-          enforce_admins: true
-          dismiss_stale_reviews: true
-          require_code_owner_reviews: true
-          require_approving_reviews: true
-          include_admins: true
-
-      - name: Protect gh-pages branch
-        uses: peter-evans/protect-branch@v3.0.0
-        with:
-          github_token: ${{ secrets.TOKEN }}
-          branch: "gh-pages"
-          enforce_admins: true
-          dismiss_stale_reviews: true
-          require_code_owner_reviews: true
-          require_approving_reviews: true
-          include_admins: true
+      - name: Update branch protection
+        uses: Hatzelencio/branch-protection@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Build and Deploy Preview
         env:
