@@ -38,7 +38,7 @@ jobs:
           branch: gh-pages
           token: ${{ secrets.ACCESS_TOKEN }}
           clean: true
-          run: |
+          dry-run: |
             yarn build
             git config --global user.name "ObaidQatan"
             git config --global user.email "ogaten27@gmail.com"
