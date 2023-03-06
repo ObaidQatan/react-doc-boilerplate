@@ -24,7 +24,7 @@ jobs:
       - name: Lint
         run: yarn lint
 
-      - name: Update branch protection
+      - name: Branch Protection
         uses: Hatzelencio/branch-protection@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
