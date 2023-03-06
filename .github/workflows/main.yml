@@ -39,7 +39,7 @@ jobs:
           git config --global user.email "ogaten27@gmail.com"
           git remote set-url origin https://${{ secrets.ACCESS_TOKEN }}@github.com/ObaidQatan/react-doc-boilerplate.git
           git checkout -B gh-pages
-          git add -f build/
+          git add build/
           git commit -m "Deploy preview"
           git push -f origin gh-pages
 
