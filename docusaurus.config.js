@@ -6,20 +6,20 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Zevi Docs",
+  title: "My Docs",
   tagline: "Product search is made easy",
   favicon: "img/favicon.webp",
 
   // Set the production url of your site here
-  url: "https://zevi.docs.io",
+  url: "https://my.docs.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: this.projectName ? `/${this.projectName}/` : "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "zevi", // Usually your GitHub org/user name.
-  projectName: "zevi-docs", // Usually your repo name.
+  organizationName: "my", // Usually your GitHub org/user name.
+  projectName: "my-docs", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -56,13 +56,13 @@ const config = {
       colorMode: {
         defaultMode: "light",
       },
-      image: "img/zevi-logo.svg",
+      image: "img/my-logo.svg",
       navbar: {
-        title: "z e v i",
+        title: "Label",
         // logo: {
-        //   alt: "Zevi Logo",
-        //   src: "img/zevi-logo.svg",
-        //   srcDark: "img/zevi-logo.svg",
+        //   alt: "My Logo",
+        //   src: "img/my-logo.svg",
+        //   srcDark: "img/my-logo.svg",
         // },
         items: [
           {
@@ -90,7 +90,7 @@ const config = {
             ],
           },
         ],
-        copyright: `All Rights Reserved. Zevi, Inc. 2021`,
+        copyright: `All Rights Reserved. My, Inc. 2021`,
       },
       prism: {
         theme: lightCodeTheme,
