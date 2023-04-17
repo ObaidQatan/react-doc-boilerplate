@@ -19,7 +19,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "my", // Usually your GitHub org/user name.
-  projectName: "react-doc-boilerplate", // Usually your repo name.
+  projectName: this.projectName, // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
