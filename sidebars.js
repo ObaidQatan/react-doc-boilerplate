@@ -30,4 +30,6 @@ const sidebars = {
    */
 };
 
+// some changes
+
 module.exports = sidebars;
